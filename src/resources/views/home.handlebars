@@ -1,0 +1,84 @@
+ <div id="container">
+<h1 class="" style="font-size: 2rem;"> Trang chủ <span style="color: blue">Fakebook</span></h1>
+<div >
+  <div >
+<form action="" method="post" class="pb-5">
+  
+  {{!-- <input class="form-control form-control-lg " style="height: 8rem; text-" type="text" placeholder="Đăng bài ngay" > --}}
+  <textarea class="form-control form-control-lg " id="subject" name="decription" placeholder="Viết bài..." style="height:7rem;"></textarea>
+  <input class="form-control form-control-lg mt-1"style="height:1.5rem; font-size:1rem;" name="img" placeholder="Link ảnh đính kèm...">
+  <button type="submit" style="background-color:rgb(53, 124, 255); color:aliceblue;border:none;" class="mt-2 btn btn-">Đăng</button>
+</form>
+
+  </div>
+  {{!-- day la cot 2 --}}
+  
+  <div > 
+    <div class="column"> 
+      {{#each sta}}
+  <div class="col-sm-18 mt-3" style="position:relative; z-index: 1; ">
+   
+    <div class="card" style="border-radius: 10px;" >
+      <div class="card-body">
+        <h5 class="p-0 m-0"> <span style="font-weight:400; margin-right:0.4rem;">Post</span>{{this.name}} </h5>
+         <p style="font-size:0.8rem; padding-bottom:0.1rem; color:rgb(128, 128, 128);">  {{this.time}}  </p>
+        <p class="card-text">{{this.decription}}</p>
+        <img src="{{this.img}}" class="card-img-top pb-2" alt="">
+        <a href="#" class="pr-2" >Like</a>
+        <a href="#" class="pr-2">Dislike</a>
+        <a href="" class="comment" >Comment</a>
+        <form class="pb-3 pt-3" action="/home/{{this._id}}?_method=PUT" method="post">
+        <div>
+
+          <input  type="text" name="content" value="" placeholder="Nhập comment của bạn..." style="width:100%; border-radius: 9px; border: none; background-color:rgb(241, 241, 241); font-size:0.9rem; padding-left:10px;">
+              
+              <input type="text" name="statusID" value="{{this._id}}" placeholder="" style="display:none;">
+              <button type="submit" class="mt-1" style="background-color:rgb(19, 121, 255); border-radius: 7px; border:none; color:rgb(243, 243, 243); display: none;">Send</button>
+        </div>
+              
+        </form>
+        <div class="context" style="overflow:auto; max-height:6rem;">
+          {{#each comments}}
+          <div width="100%" style="background-color:rgba(250, 250, 250, 0.973); border-radius: 10px; margin-top:1rem; padding-left:1rem;"><span style="font-weight:600;"> {{this.name}} </span> <br>{{this.content}}</div>
+         {{/each}}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ {{/each}}
+  {{!-- <div class="col-sm-18 mt-3 ml-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         <a href="#" class="pr-2">Like</a>
+        <a href="#" class="pr-2">Dislike</a>
+        <a href="#" >Comment</a>
+      </div>
+    </div>
+  </div> --}}
+</div>
+
+  </div>
+
+</div>
+
+
+ </div> 
+ 
+ <style>
+  #container {
+    max-width: 60%;
+    margin:0 auto;
+   }
+ </style>
+
+ <script type="text/javascript">
+   const context = document.getElementsByClassName('context');
+   const comment = document.getElementsByClassName('comment');
+   comment.onclick = function(){
+      context.style.display = 'block';
+   }
+
+ </script>

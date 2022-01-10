@@ -1,0 +1,32 @@
+{{!-- 
+ <form method="post" action="/site/store" >
+ <label for="name">Name</label>
+ <input type="text"  name="name"> <br>
+ <label for="description">Decription</label>
+ <input type="text" name="decription"> <br>
+ <label for="videoID">VideoID</label>
+ <input type="text" name="videoID"> <br>
+ <button type="submit" name="">Thêm </button>
+ 
+ </form> --}}
+
+ <form method="post" action="/site/store" class="m-3">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input name="name" class="form-control"   placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="decription">Description</label>
+    <input  name="decription" class="form-control"  placeholder="Description">
+  </div>
+  <div class="form-group">
+    <label for="videoID">VideoID</label>
+    <input name="videoID" class="form-control" id="exampleInputPassword1" placeholder="VideoID">
+  </div>
+  <div class="form-group">
+    <label for="slug">slug</label>
+    <input name="slug" class="form-control" id="exampleInputPassword1" placeholder="slug">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
