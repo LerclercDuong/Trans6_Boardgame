@@ -33,7 +33,7 @@ app.put('/home/:id', function(req, res, next){
          .catch((err) => {
             console.log('Error: ' + err);
         })
-    res.redirect('http://localhost:3000/home')
+    res.redirect('/home')
     
 })
 app.get('/logout',function(req, res){

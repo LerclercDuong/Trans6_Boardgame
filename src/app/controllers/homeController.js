@@ -6,7 +6,7 @@ class homeController{
         req.body.name = req.session.User
         var tus = new status(req.body)
         tus.save()
-        res.redirect("http://localhost:3000/home")
+        res.redirect("/home")
         
         // status.find({}, function(err,status){
         //     if(!err){

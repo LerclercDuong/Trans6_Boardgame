@@ -44,13 +44,13 @@ store(req, res){
     var course = new khoahoc(req.body)
     course.save()
     
-    res.redirect("http://localhost:3000/site")
+    res.redirect("/site")
 }
 
 deleteCourse(req, res){
     khoahoc.deleteOne({_id: req.params.id})
     .then(function(){
-        res.redirect("http://localhost:3000/site")
+        res.redirect("/site")
     })
    
 }

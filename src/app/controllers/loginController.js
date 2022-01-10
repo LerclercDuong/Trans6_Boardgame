@@ -11,7 +11,7 @@ class loginController{
             if(data){
                 req.session.isAuth = true;
                  req.session.User = data.username;
-                 res.redirect('http://localhost:3000/site')
+                 res.redirect('/home')
                  
             }else{
                 res.send('sai mat khau')
