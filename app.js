@@ -17,10 +17,10 @@ var methodOverride = require('method-override')
 
 
 // const newController = require('./app/controllers/NewsController')
-const route = require('./routes/index')
+const route = require('./src/routes/index')
 const url = "https://api.apify.com/v2/key-value-stores/QubTry45OOCkTyohU/records/LATEST?fbclid=IwAR3Vp_SUYIkhc5ziZlZpAAX8mqVQLbH1uvUb68r6Ahjne_eP9QWH23XLNdg"
 
-const db = require('./config/db')
+const db = require('./src/config/db')
 
 
 app.use(
@@ -33,7 +33,7 @@ app.use(
 
 db.connect()
 app.use(express.static(path.join(__dirname, 'public')))
-app.set('views',path.join(__dirname, 'resources/views'))
+app.set('views',path.join(__dirname, 'src/resources/views'))
 app.use(express.urlencoded({
     extended: true
 }))
