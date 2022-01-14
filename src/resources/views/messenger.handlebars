@@ -22,7 +22,8 @@
       list-style-type: none;
       margin-right: 1.2rem;
     margin-left:1.2rem;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 2rem;
     border-radius:1rem;
@@ -51,6 +52,7 @@
 
           })
           chatmess.value =''
+          
         })
    
       socket.on('user-chat', function(data) {
@@ -59,5 +61,6 @@
           const newchat = document.createElement('li')
          newchat.innerHTML =`<span style="font-weight:650; font-family:sans-serif; "> ${data.name} </span>:  ${data.message}`;
           noidung.appendChild(newchat)
+          noidung.scrollTo(0, 10000);
         })
 </script>

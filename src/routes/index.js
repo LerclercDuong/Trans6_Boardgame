@@ -46,7 +46,7 @@ app.use('/site',function(req,res,next){
     if(req.session.isAuth){
         next()
     }else{
-        res.send('ban can dang nhap de xem noi dung nay')
+        res.send('Bạn cần đăng nhập để xem nội dung này')
     }
 },SiteRouter)
 // app.use('/course',CoursesRouter)
@@ -58,30 +58,38 @@ app.get('/home',function(req,res,next){
         res.send('Bạn cần đăng nhập để xem nội dung này')
     }
 },(req, res) =>{
-    // comments.find({})
-    // .then(function(comments){
-    //     var com = comments.map(function(c){
-    //              return c.toObject()
-    //     })
-    //     console.log(com)
-    // })
+  
     
-    status.find({}, function(err,status){
-        if(!err){
-            var sta = status.map(function(e){
-                return e.toObject()
-            })       
-            sta.forEach(function(tus){
-                tus.time = tus.createdAt.toString().slice(0,tus.createdAt.toString().indexOf('GMT'))
-            })
+//     status.find({}, function(err,status){
+//         if(!err){
+//             var sta = status.map(function(e){
+//                 return e.toObject()
+//             })       
+//             sta.forEach(function(tus){
+//                 tus.time = tus.createdAt.toString().slice(0,tus.createdAt.toString().indexOf('GMT'))
+//             })
             
-            res.render('home', {sta, username: req.session.User, });
-        }else {
-            res.status(400).json({error: 'error'});
-        }
+//             res.render('home', {sta, username: req.session.User, });
+//         }else {
+//             res.status(400).json({error: 'error'});
+//         }
+//     })
+    
+// })
+
+status.find({}).sort({createdAt: -1})
+.then(function(status){
+    var sta = status.map(function(e){
+        return e.toObject()
+    })       
+    sta.forEach(function(tus){
+        tus.time = tus.createdAt.toString().slice(0,tus.createdAt.toString().indexOf('GMT'))
     })
     
+    res.render('home', {sta, username: req.session.User, })
 })
+})
+    
 app.get('/login',(req, res) =>{
     res.render('login')
 })
