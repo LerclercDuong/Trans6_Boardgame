@@ -128,8 +128,9 @@ const arrange = [
 
 
 
-const type =  <%= content %>;
-const num = <%= no %>;
+const type = <%=content%>;
+const num = <%=no%>;
+
 display.innerHTML = `<div> ${type[num].ques}  </div>`
     show.onclick = function(){
           display.innerHTML = `<div> ${type[num].answer}  </div>`

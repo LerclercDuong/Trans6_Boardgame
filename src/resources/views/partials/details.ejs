@@ -108,7 +108,7 @@ const arrange = [
 ]
 const box = document.getElementById('box')
 const type = <%=slug%>;
-const title = `<%=slug%>`;
+const title = '<%=slug%>';
 console.log(type)
    for( var i = 0; i < type.length; i++){
        box.innerHTML += `<a href="/game/${title}/${i}"> <div class="question" > ${type[i].number}</div> </a>`
