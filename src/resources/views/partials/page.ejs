@@ -1,0 +1,56 @@
+<h2>
+   Viet bai essay
+
+  
+</h2>
+<h1 id="name" class="test" >I am Duong Minh Tri</h1>
+
+<!-- <input type="text" style="width:50%; height:20rem; overflow-x: scroll;"> -->
+<textarea name="" id="" cols="30" rows="10" style="width:50%; height:20rem; overflow-y: scroll"></textarea>
+
+<style>
+   .red{
+      color: rgb(0, 255, 0);
+   }
+   .white{
+      color:white;
+   }
+
+   @-webkit-keyframes my {
+	 0% { color: #00ff77; } 
+	 50% { color: #fff;  } 
+	 100% { color: #F8CD0A;  } 
+ }
+ @-moz-keyframes my { 
+	 0% { color: #F8CD0A;  } 
+	 50% { color: #fff;  }
+	 100% { color: #F8CD0A;  } 
+ }
+ @-o-keyframes my { 
+	 0% { color: #F8CD0A; } 
+	 50% { color: #fff; } 
+	 100% { color: #F8CD0A;  } 
+ }
+ @keyframes my { 
+	 0% { color: #F8CD0A;  } 
+	 50% { color: #fff;  }
+	 100% { color: #F8CD0A;  } 
+ } 
+ .test {
+         background:#3d3d3d;
+         font-size:24px;
+         font-weight:bold;
+	 -webkit-animation: my 700ms infinite;
+	 -moz-animation: my 700ms infinite; 
+	 -o-animation: my 700ms infinite; 
+	 animation: my 700ms infinite;
+}
+</style>
+<script>
+ const name = document.getElementById('name');
+ setInterval(function() {
+    
+    name.classList.toggle('red')
+ },400)
+    
+</script>

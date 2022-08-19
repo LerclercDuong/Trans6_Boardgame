@@ -1,0 +1,120 @@
+<h1 id="name"><%= slug %></h1>
+<div id="box">
+   
+
+</div>
+<style>
+    #name {
+        
+        color: aliceblue;
+        font-weight: bold;
+    }
+    #box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .question{
+        width:8rem;
+        height:8rem;
+        background-color:rgb(1, 186, 118);
+        color: aliceblue;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        margin:2rem;
+        text-align: center;
+        border-radius: 9px;
+        display: inline-block;
+        padding-top:2.5rem;
+        box-sizing: border-box;
+    }
+</style>
+<script>
+    
+const action = [
+{number: 'A1', ques: '', answer: 'tubular(adj)' },
+{number: 'A2', ques: '', answer: 'coupled with (phrasal verb)'},
+{number: 'A3', ques: '', answer: 'fluctuate(v)'},
+{number: 'A4', ques: '', answer: 'fracture(v)'},
+{number: 'A5', ques: '', answer: 'denture(n)'},
+{number: 'A6', ques: '', answer: 'confer (v)'},
+{number: 'A7', ques: '', answer: 'hold still (v)'},
+{number: 'A8', ques: '', answer: 'safeguard (n)'},
+{number: 'A10', ques: '', answer: 'trauma(n)'},
+{number: 'A11', ques: '', answer: 'anthem(n)'},
+{number: 'A12', ques: '', answer: 'slanted(adj)'},
+{number: 'A13', ques: '', answer: 'nourish(v)'},
+{number: 'A14', ques: '', answer: 'aesthetic (adj)'},
+{number: 'A15', ques: '', answer:'flagging (n) (adj)'},
+{number: 'A16', ques: '', answer:'mimic(v)'},
+{number: 'A17', ques: '', answer:'infiltrate (v)'}
+]
+
+const fill = [
+{number:'F1', ques:'The proposal calls for ______ changes in public land use. A. sweeping   B. aesthetic  C. orthopedic  D. disparate ', answer: 'sweeping '},
+{number:'F2', ques:'', answer: ''},
+{number:'F3', ques:'', answer:''},
+{number:'F4', ques:'', answer: ''},
+{number:'F5', ques:'', answer: ''},
+{number:'F6', ques:'', answer: ''},
+{number:'F7', ques:'', answer: ''},
+{number:'F8', ques:'', answer: ''},
+{number:'F9', ques:'', answer: ''},
+{number:'F10', ques:'', answer: ''},
+{number:'F11', ques:'', answer: ''},
+{number:'F12', ques:'', answer: ''},
+{number:'F13', ques:'', answer: ''},
+{number:'F14', ques:'', answer: ''},
+{number:'F15', ques:'', answer: ''},
+{number:'F16', ques:'', answer: ''},
+{number:'F17', ques:'', answer: ''}
+]
+const definition = [
+{number:'D1', ques:'', answer:'Investment (n)'},
+{number:'D2', ques:'', answer:'Paralysis(n)'},
+{number:'D3', ques:'', answer:'á la (prep) '},
+{number:'D4', ques:'', answer:'orthopedic (adj)'},
+{number:'D5', ques:'', answer:'outlet(n)'},
+{number:'D6', ques:'', answer:' set off (v) '},
+{number:'D7', ques:'', answer:' rebound(v) '},
+{number:'D8', ques:'', answer:'exploit(v) '},
+{number:'D9', ques:'', answer:' longevity (n)'},
+{number:'D10', ques:'', answer:'emission (n) '},
+{number:'D11', ques:'', answer:'legislate (v)'},
+{number:'D12', ques:'', answer:'gastrointestinal tract (n) '},
+{number:'D13', ques:'', answer:'eradication efforts (n)'},
+{number:'D14', ques:'', answer:' potent (adj)'},
+{number:'D15', ques:'', answer:'infuse(v) '}
+]
+const arrange = [
+    {number:'R1', ques:' urccno ( this word and agree are synonyms)', answer:' concur(v) '},
+    {number:'R2', ques:' pextor    ( this word and import are antonyms)', answer:'export(v)'},
+    {number:'R3', ques:' osrtirypep (  this word and affluence are synonyms)', answer:' prosperity (n) '},
+    {number:'R4', ques:' tenunedcreped ( The meaning of this word is that never having  happened ', answer:' unprecedented (adj)'},
+    {number:'R5', ques:' sephoonipn (to see something as a potential solution to a problem) ', answer:' pin hopes on (v)'},
+    {number:'R6', ques:' thiwspleuco (together)', answer:'couples with'},
+    {number:'R7', ques:' rudleba ( this word and hardwearing are synonyms)', answer:'durable (adj)'},
+    {number:'R8', ques:' bareeonlwnen ( this word and replaced are antonyms)', answer:'nonrenewable (adj)'},
+    {number:'R9', ques:' perotocar taicvyti ( this word and teamwork are synonyms )', answer:' corporate activity  (n)'},
+    {number:'R10', ques:' atvogaadunse ( this word and benefical  are synonyms)', answer:'advantageous (adj)'},
+    {number:'R11', ques:'laiyorteatr  ( this word and tolerant are antonyms)', answer:'retaliatory (adj)'},
+    {number:'R12', ques:' setotf >>>> receive and develop', answer:'foster(v) '},
+    {number:'R13', ques:' levon >>>> inovative', answer:'novel(adj)'},
+    {number:'R14', ques:' yubo >>> develop', answer:'buoy(v) '},
+    {number:'R15', ques:' nentiga >>> related to biology ( causing factor )', answer:'antigen(n)'},
+    {number:'R16', ques:' dacrel >>> origin, beginning places', answer:'cradle (n)'},
+    {number:'R17', ques:' owragy (to turn out worse than planned)', answer:'go awry (v) '},
+]
+const box = document.getElementById('box')
+const type = <%=slug%>;
+const title = `<%=slug%>`;
+console.log(type)
+   for( var i = 0; i < type.length; i++){
+       box.innerHTML += `<a href="/game/${title}/${i}"> <div class="question" > ${type[i].number}</div> </a>`
+   }
+
+
+const question = GetElementByClassName("question")
+console.log(question)
+</script>

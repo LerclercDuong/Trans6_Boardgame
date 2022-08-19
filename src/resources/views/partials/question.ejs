@@ -1,0 +1,138 @@
+<!-- <h1>Question> </h1> -->
+<!-- <h2><%=no%></h2> -->
+<div id="questionbox"> 
+    <div id="display">
+
+    </div>
+<div id="show">
+   SHOW ANSWER
+</div>
+</div>
+<style>
+    p{
+      font-size:2rem;
+    }
+    #questionbox {
+        width: 90%;
+        height: 30rem;
+        background-color:white;
+        border-radius: 10px;
+        padding: 4rem;
+        box-sizing: border-box;
+    }
+    #show{
+        background-color: rgb(194, 55, 0);
+        width: 5rem;
+        height: 2.8rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        float: right;
+        position: absolute;
+        margin-top: 2rem;
+    }
+    #display{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        width:80%;
+  }
+  #show:hover{
+    cursor:grabbing;
+    background-color:dodgerblue ;
+    color: rgb(255, 124, 150);
+    
+  }
+</style>
+<script>
+    const show= document.getElementById('show');
+    const display= document.getElementById('display');
+    const action = [
+    {number: 'A1', ques: '', answer: 'tubular(adj)' },
+    {number: 'A2', ques: '', answer: 'coupled with (phrasal verb)'},
+    {number: 'A3', ques: '', answer: 'fluctuate(v)'},
+    {number: 'A4', ques: '', answer: 'fracture(v)'},
+    {number: 'A5', ques: '', answer: 'denture(n)'},
+    {number: 'A6', ques: '', answer: 'confer (v)'},
+    {number: 'A7', ques: '', answer: 'hold still (v)'},
+    {number: 'A8', ques: '', answer: 'safeguard (n)'},
+    {number: 'A10', ques: '', answer: 'trauma(n)'},
+    {number: 'A11', ques: '', answer: 'anthem(n)'},
+    {number: 'A12', ques: '', answer: 'slanted(adj)'},
+    {number: 'A13', ques: '', answer: 'nourish(v)'},
+    {number: 'A14', ques: '', answer: 'aesthetic (adj)'},
+    {number: 'A15', ques: '', answer:'flagging (n) (adj)'},
+    {number: 'A16', ques: '', answer:'mimic(v)'},
+    {number: 'A17', ques: '', answer:'infiltrate (v)'}
+    ]
+    const fill = [
+{number:'F1', ques:'The proposal calls for ______ changes in public land use. <br> <p> A. sweeping   B. aesthetic  C. orthopedic   D. disparate </p>', answer: 'sweeping '},
+{number:'F2', ques:'These beautiful African churches have no _____ in Europe. <br> <p> A. aesthetic    B parallel   C. large   D.noteworthy </p>', answer:'parallel '},
+{number:'F3', ques:'They hope the new drug will prove especially ______ in the relief of pain. <br> <p> A.mainstream   B. pin hope on   C. steadfastly   D.efficacious </p>', answer:'efficacious'},
+{number:'F4', ques:'Hundreds of people were ______ homeless by the earthquake. <br>  <p> A. result B. rendered  C. Trauma.     D. potent </p>', answer: 'rendered'},
+{number:'F5', ques:'She was ________ in support of womens rights <br> <p> A. retaliatory   B. prosperity   C. . steadfastly  D. paralysis </p>', answer: 'steadfastly'},
+{number:'F6', ques:'Mice can _______ to farmer for this rice season <br> <p> A: carry a risk      B: come 	C:going  	D:moving </p>', answer: 'carry a risk'},
+{number:'F7', ques:'Human can live outside the earth without oxygen  are not _____for many studies  <br> <p> A:viable 	  	B:can 		C:impossible 		D: may </p>', answer: 'viable'},
+{number:'F8', ques:'He gave several _________ performances during his short career. <br> <p> A:noteworthy 		B:strong 		C: mainstream		D: first  </p>', answer: 'noteworthy'},
+{number:'F9', ques:'Grass was eaten by a rabbit and a rabbit was eaten by a fox and when the fox die the grass will growth on  there we call that ______  <br> <p> A:  Fruit Chain 	B: Food chain 	C: Vegetable chain 		D: Animal chain </p>', answer: 'B: Food chain'},
+{number:'F10', ques:'He has expressed his opposition on the plan, I completely ______ with him  <br> <p> A. concur  B. disagree C. ward off   D. hold still </p>', answer: 'A. concur'},
+{number:'F11', ques:' For the _______ of the earth, people needs to protect the environment <br> <p>   A. fluctuation  B: longevity     C. noteworthy D. contamination </p>', answer: 'B: longevity'},
+{number:'F12', ques:' All the children were well _______ and in good physical condition. <br> <p>  A. adapt   B. nourished   C. rebound   D. set off </p>', answer: 'B. nourished'},
+{number:'F13', ques:'There may be a shortage of flu vaccine to ________ the elderly and other vulnerable groups. <br> <p> A. inoculate      B. vaccinate   C. confer  D. both A and B </p> ', answer: 'D. both A and B'},
+{number:'F14', ques:'A cat does whatever a girl does. A cat ______ girl`s action  <br> <p> A. mimics   B. infiltrate  C. succumb   D.laud </p> ', answer: 'A. mimics'},
+{number:'F15', ques:'He has found ways to ______ new energy into his performances. <br> <p> A. confer   B. render      C. infuse    D. increase </p>', answer: ' C. infuse'},
+{number:'F16', ques:'There is _______ sports : volleyball, badminton, football, hockey, basketball and so on. <br> <p>  A. investment   B. infrastructure  C.in effect    D.wide array of </p>', answer: 'D. wide array of'},
+{number:'F17', ques:' Always _______ about his appearance in the past, he had become dirty and unkempt, with straggly hair, stained clothes, and patches of silver stubble on his chin <br> <p>  A. sweeping       b. . retaliatory   c.mainstream       d. meticulous </p>', answer: 'd. meticulous'}
+]
+const definition = [
+{number:'D1', ques:'', answer:'Investment (n)'},
+{number:'D2', ques:'', answer:'Paralysis(n)'},
+{number:'D3', ques:'', answer:'á la (prep) '},
+{number:'D4', ques:'', answer:'orthopedic (adj)'},
+{number:'D5', ques:'', answer:'outlet(n)'},
+{number:'D6', ques:'', answer:' set off (v) '},
+{number:'D7', ques:'', answer:' rebound(v) '},
+{number:'D8', ques:'', answer:'exploit(v) '},
+{number:'D9', ques:'', answer:' longevity (n)'},
+{number:'D10', ques:'', answer:'emission (n) '},
+{number:'D11', ques:'', answer:'legislate (v)'},
+{number:'D12', ques:'', answer:'gastrointestinal tract (n) '},
+{number:'D13', ques:'', answer:'eradication efforts (n)'},
+{number:'D14', ques:'', answer:' potent (adj)'},
+{number:'D15', ques:'', answer:'infuse(v) '}
+]
+const arrange = [
+    {number:'R1', ques:' urccno <br> <p> ( this word and agree are synonyms) </p', answer:' concur(v) '},
+    {number:'R2', ques:' pextor  <br> <p>  ( this word and import are antonyms) </p', answer:'export(v)'},
+    {number:'R3', ques:' osrtirypep <br> <p> (  this word and affluence are synonyms)</p', answer:' prosperity (n) '},
+    {number:'R4', ques:' tenunedcreped <br> <p> ( The meaning of this word is that never having  happened) </p', answer:' unprecedented (adj)'},
+    {number:'R5', ques:' sephoonipn <br> <p> (to see something as a potential solution to a problem) </p', answer:' pin hopes on (v)'},
+    {number:'R6', ques:' thiwspleuco <br> <p> (together)</p', answer:'couples with'},
+    {number:'R7', ques:' rudleba <br> <p> ( this word and hardwearing are synonyms)</p', answer:'durable (adj)'},
+    {number:'R8', ques:' bareeonlwnen <br> <p> ( this word and replaced are antonyms)</p', answer:'nonrenewable (adj)'},
+    {number:'R9', ques:' perotocar taicvyti <br> <p> ( this word and teamwork are synonyms )</p', answer:' corporate activity  (n)'},
+    {number:'R10', ques:' atvogaadunse <br> <p> ( this word and benefical  are synonyms)</p', answer:'advantageous (adj)'},
+    {number:'R11', ques:'laiyorteatr  <br> <p> ( this word and tolerant are antonyms)</p', answer:'retaliatory (adj)'},
+    {number:'R12', ques:' setotf <br> <p> >>>> receive and develop</p', answer:'foster(v) '},
+    {number:'R13', ques:' levon <br> <p> >>>> inovative</p', answer:'novel(adj)'},
+    {number:'R14', ques:' yubo <br> <p> >>> develop</p', answer:'buoy(v) '},
+    {number:'R15', ques:' nentiga <br> <p> >>> related to biology ( causing factor )</p', answer:'antigen(n)'},
+    {number:'R16', ques:' dacrel <br> <p> >>> origin, beginning places</p', answer:'cradle (n)'},
+    {number:'R17', ques:' owragy <br> <p> (to turn out worse than planned)</p', answer:'go awry (v) '},
+]
+
+
+
+
+
+const type =  <%= content %>;
+const num = <%= no %>;
+display.innerHTML = `<div> ${type[num].ques}  </div>`
+    show.onclick = function(){
+          display.innerHTML = `<div> ${type[num].answer}  </div>`
+    }
+
+    </script>
