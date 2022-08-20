@@ -18,6 +18,7 @@
     #container{
         display:flex;
         justify-content: space-between;
+        margin-top:2rem;
         
     }
     #timer {
@@ -84,14 +85,18 @@
     {number: 'A6', ques: '', answer: 'confer (v)'},
     {number: 'A7', ques: '', answer: 'hold still (v)'},
     {number: 'A8', ques: '', answer: 'safeguard (n)'},
+    {number: 'A9', ques: '', answer: 'slanted (adj)'},
     {number: 'A10', ques: '', answer: 'trauma(n)'},
     {number: 'A11', ques: '', answer: 'anthem(n)'},
-    {number: 'A12', ques: '', answer: 'slanted(adj)'},
-    {number: 'A13', ques: '', answer: 'nourish(v)'},
-    {number: 'A14', ques: '', answer: 'aesthetic (adj)'},
-    {number: 'A15', ques: '', answer:'flagging (n) (adj)'},
-    {number: 'A16', ques: '', answer:'mimic(v)'},
-    {number: 'A17', ques: '', answer:'infiltrate (v)'}
+    {number: 'A12', ques: '', answer: 'nourish (v)'},
+    {number: 'A13', ques: '', answer: 'aesthetic (adj)'},
+    {number: 'A14', ques: '', answer: 'flagging (n) (adj)'},
+    {number: 'A15', ques: '', answer:' emulate (v)'},
+    {number: 'A16', ques: '', answer:'infiltrate (v)'},
+    {number: 'A17', ques: '', answer:'lie dormant (v)'},
+    {number: 'A18', ques: '', answer:'have a taste for '},
+    {number: 'A19', ques: '', answer:'overreach(v)'},
+    {number: 'A20', ques: '', answer:'laud (v) '}
     ]
     const fill = [
 {number:'F1', ques:'The proposal calls for ______ changes in public land use. <br> <p> A. sweeping   B. aesthetic  C. orthopedic   D. disparate </p>', answer: 'sweeping '},
@@ -110,7 +115,11 @@
 {number:'F14', ques:'A cat does whatever a girl does. A cat ______ girl`s action  <br> <p> A. mimics   B. infiltrate  C. succumb   D.laud </p> ', answer: 'A. mimics'},
 {number:'F15', ques:'He has found ways to ______ new energy into his performances. <br> <p> A. confer   B. render      C. infuse    D. increase </p>', answer: ' C. infuse'},
 {number:'F16', ques:'There is _______ sports : volleyball, badminton, football, hockey, basketball and so on. <br> <p>  A. investment   B. infrastructure  C.in effect    D.wide array of </p>', answer: 'D. wide array of'},
-{number:'F17', ques:' Always _______ about his appearance in the past, he had become dirty and unkempt, with straggly hair, stained clothes, and patches of silver stubble on his chin <br> <p>  A. sweeping       b. . retaliatory   c.mainstream       d. meticulous </p>', answer: 'd. meticulous'}
+{number:'F17', ques:' Always _______ about his appearance in the past, he had become dirty and unkempt, with straggly hair, stained clothes, and patches of silver stubble on his chin <br> <p>  A. sweeping       b. . retaliatory   c.mainstream       d. meticulous  </p>', answer: 'd. meticulous'},
+{number:'F18', ques:' The town finally_______ last week after being pounded with heavy artillery for more than two months. <br> <p>  A.emulated  B.. wafted   C.succumbed    D.overreached  </p>', answer: 'C.succumbed'},
+{number:'F19', ques:' His colleagues _______ him after he criticized the company in public <br> <p>  A. . Infiltrated    B. ostracized   C.. rallied   D. lauded </p>', answer: 'B. ostracized'},
+{number:'F20', ques:'  Some companies ______ to cheaper locations to cut costs <br> <p>  A. outsource   B. set off    C.infuse     D.carry a risk </p>', answer: 'A. outsource'}
+
 ]
 const definition = [
 {number:'D1', ques:'', answer:'Investment (n)'},
@@ -127,27 +136,37 @@ const definition = [
 {number:'D12', ques:'', answer:'gastrointestinal tract (n) '},
 {number:'D13', ques:'', answer:'eradication efforts (n)'},
 {number:'D14', ques:'', answer:' potent (adj)'},
-{number:'D15', ques:'', answer:'infuse(v) '}
+{number:'D15', ques:'', answer:'infuse(v) '},
+{number:'D16', ques:'', answer:'mucous membrane (n '},
+{number:'D17', ques:'', answer:'imbue(v)  '},
+{number:'D18', ques:'', answer:'endemic(adj) '},
+{number:'D19', ques:'', answer:'traction (n) '},
+{number:'D20', ques:'', answer:' homogenization (n) '}
+
 ]
 const arrange = [
     {number:'R1', ques:' urccno <br> <p> ( this word and agree are synonyms) </p', answer:' concur(v) '},
     {number:'R2', ques:' pextor  <br> <p>  ( this word and import are antonyms) </p', answer:'export(v)'},
-    {number:'R3', ques:' osrtirypep <br> <p> (  this word and affluence are synonyms)</p', answer:' prosperity (n) '},
+    {number:'R3', ques:' osrtirypep <br> <p> (  this word and good conditions are synonyms)</p', answer:' prosperity (n) '},
     {number:'R4', ques:' tenunedcreped <br> <p> ( The meaning of this word is that never having  happened) </p', answer:' unprecedented (adj)'},
     {number:'R5', ques:' sephoonipn <br> <p> (to see something as a potential solution to a problem) </p', answer:' pin hopes on (v)'},
     {number:'R6', ques:' thiwspleuco <br> <p> (together)</p', answer:'couples with'},
-    {number:'R7', ques:' rudleba <br> <p> ( this word and hardwearing are synonyms)</p', answer:'durable (adj)'},
+    {number:'R7', ques:' rudleba <br> <p> ( this word and  long-lasting are synonyms)</p', answer:'durable (adj)'},
     {number:'R8', ques:' bareeonlwnen <br> <p> ( this word and replaced are antonyms)</p', answer:'nonrenewable (adj)'},
     {number:'R9', ques:' perotocar taicvyti <br> <p> ( this word and teamwork are synonyms )</p', answer:' corporate activity  (n)'},
     {number:'R10', ques:' atvogaadunse <br> <p> ( this word and benefical  are synonyms)</p', answer:'advantageous (adj)'},
-    {number:'R11', ques:'laiyorteatr  <br> <p> ( this word and tolerant are antonyms)</p', answer:'retaliatory (adj)'},
+    {number:'R11', ques:'laiyorteatr  <br> <p> ( this word and revenge are synonyms)</p', answer:'retaliatory (adj)'},
     {number:'R12', ques:' setotf <br> <p> >>>> receive and develop</p', answer:'foster(v) '},
     {number:'R13', ques:' levon <br> <p> >>>> inovative</p', answer:'novel(adj)'},
     {number:'R14', ques:' yubo <br> <p> >>> develop</p', answer:'buoy(v) '},
-    {number:'R15', ques:' nentiga <br> <p> >>> related to biology ( causing factor )</p', answer:'antigen(n)'},
+    {number:'R15', ques:' desofcmpoo <br> <p> >>> ( this word and contain are synonyms)</p', answer:'composed of(v) '},
     {number:'R16', ques:' dacrel <br> <p> >>> origin, beginning places</p', answer:'cradle (n)'},
     {number:'R17', ques:' owragy <br> <p> (to turn out worse than planned)</p', answer:'go awry (v) '},
-]
+    {number:'R18', ques:' taedapisr <br> <p> ( this word and different are synonyms)</p', answer:'disparate(adj)  '},
+    {number:'R19', ques:' iiynuqat  <br> <p>  ( this word and old objects are synonyms) </p', answer:'antiquity (n)  '},
+    {number:'R20', ques:' cesevomprhine <br> <p>   ( this word and complete are synonyms)</p', answer:'comprehensive (adj)'}
+
+    ]
 
 
 
