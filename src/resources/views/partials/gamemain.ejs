@@ -1,12 +1,12 @@
 <div id="container">
- <div class="questionsbox">
-   <a  href="/game/action">
+ <div class="questionsbox" style="background-color: rgb(0, 113, 227);">
+   <a  href="/game/action" >
      ACTION
     </a>
  </div>
     
  
-<div class="questionsbox">
+<div class="questionsbox" style="background-color: rgb(6, 195, 0);">
    <a  href="/game/fill">
     FILL THE BLANK
    </a>
@@ -14,13 +14,13 @@
     
  
  
-<div class="questionsbox">
+<div class="questionsbox" style="background-color: rgba(255, 157, 0, 0.889);">
    <a  href="/game/definition">
     DEFINITION
    </a>
 </div>
 
-<div class="questionsbox">
+<div class="questionsbox" style="background-color: rgb(193, 0, 0);">
    <a href="/game/arrange">
     ARRANGE
    </a>
@@ -28,7 +28,7 @@
 
 
 
-<div class="questionsbox">
+<div class="questionsbox" style="background-color: rgb(177, 0, 150);">
    <a  href="/game/speacial">
     SPECIAL
    </a>
@@ -43,18 +43,18 @@
     height: 15rem;
     width: 28rem;
     background-color:rgb(176, 0, 102);
-   border-radius: 10px;
+   border-radius: 15px;
     text-align: center;
     margin: 20px;
     box-sizing: border-box;
     /* padding: 3rem; */
     /* position: relative; */
     /* align-content: center; */
-   
+    
 }
-.questionsbox:hover{
-   background-color: rgb(0, 195, 255);
-   color: coral;
+
+.questionsbox a:hover{
+   color: rgb(26, 26, 26);
    
 }
 .questionsbox a{
@@ -69,6 +69,7 @@
    text-align: center;
    position: relative;
    top: 40%;
+   transition: color 1s ease-out 100ms;
 }
 
 #container{
