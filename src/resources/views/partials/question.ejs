@@ -1,5 +1,8 @@
 <!-- <h1>Question> </h1> -->
 <!-- <h2><%=no%></h2> -->
+<audio id="audio" src="countdown.mp3">
+  
+</audio>
 <div id="questionbox"> 
     <div id="display">
 </div>
@@ -73,7 +76,7 @@
     
   }
 </style>
-<script>
+<script type="text/javascript">
     const show= document.getElementById('show');
     const display= document.getElementById('display');
     const action = [
@@ -170,8 +173,9 @@ const arrange = [
 
 
 
-
-
+const audio = document.getElementById('audio')
+   audio.play()
+   audio.muted = true;
 const type = <%=content%>;
 const num = <%=no%>;
 
@@ -186,6 +190,7 @@ display.innerHTML = `<div> ${type[num].ques}  </div>`
     var timerId = setInterval(countdown, 1000);
     
     function countdown() {
+      
       if (timeLeft == -1) {
         clearTimeout(timerId);
         doSomething();

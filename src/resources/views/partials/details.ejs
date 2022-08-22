@@ -4,6 +4,7 @@
 
 </div>
 <style>
+
     #name {
         
         color: aliceblue;
@@ -28,6 +29,13 @@
         display: inline-block;
         padding-top:2.5rem;
         box-sizing: border-box;
+        transition: color 0.5s linear ;
+        transition: color 0.5s linear ;
+        transition: background-color 0.5s ease;
+    }
+    .question:hover{
+       background-color:rgb(255, 255, 255);
+       color: rgb(0, 0, 0);
     }
 </style>
 <script>
@@ -132,6 +140,13 @@ console.log(type)
    }
 
 
-const question = GetElementByClassName("question")
-console.log(question)
+const question = document.getElementsByClassName('question')
+// console.log(question)
+
+   
+
+
+        
+
+
 </script>
